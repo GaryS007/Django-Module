@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
+
 import os 
+from pathlib import Path
 import dj_database_url
 
 
@@ -29,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-!aj@g0#=@ujtt5o%yqnuz42y8m&d-s5_w_r@)z^9m=!^zdw6tm'
+SECRET_KEY = os.environ.get('django-insecure-!aj@g0#=@ujtt5o%yqnuz42y8m&d-s5_w_r@)z^9m=!^zdw6tm')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
