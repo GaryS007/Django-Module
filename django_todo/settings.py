@@ -15,12 +15,12 @@ import os
 from pathlib import Path
 import dj_database_url
 
-development = os.environ.get('DEVELOPMENT', False)
-
-# import env
 
 if os.path.isfile("env.py"):
     import env
+
+
+development = os.environ.get('DEVELOPMENT', False)
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +37,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-!aj@g0#=@ujtt5o%yqnuz
 DEBUG = development
 
 if development:
-    ALLOWED_HOSTS = ['localhost']
+    ALLOWED_HOSTS = ['localhost', '8000-garys007-djangomodule-dpkcv09dc58.ws-eu99.gitpod.io']
 else:
     ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]
 
